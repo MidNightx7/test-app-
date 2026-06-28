@@ -1,0 +1,58 @@
+# DonutWeapons Configuration
+# All mechanics are tunable here — no hardcoded values
+
+soul-blade:
+  name: "§5§lSoul Blade"
+  instant-kill-on-crit: true
+  lightning-on-kill: true
+  crit-fall-velocity: 0.0   # minimum fall velocity to count as crit (0 = any crit)
+  damage-multiplier: 3.0    # base damage multiplier on non-crit hits
+
+inferno-axe:
+  name: "§c§lInferno Axe"
+  fire-duration: 10         # seconds target burns
+  explosion-on-kill: true
+  explosion-power: 2.5      # vanilla TNT = 4.0
+  explosion-breaks-blocks: false
+
+void-bow:
+  name: "§8§lVoid Bow"
+  teleport-shooter-to-target: true
+  pull-target-to-shooter: false  # set true to reverse: pulls them to you instead
+  effect-on-teleport: true       # blindness + slowness on teleported target
+
+titan-chestplate:
+  name: "§7§lTitan Chestplate"
+  damage-reduction: 0.90         # 90% damage reduction (0.0 - 1.0)
+  knockback-immunity: true
+  regeneration-enabled: true
+  regeneration-interval: 40      # ticks between regen pulses (40 = 2 seconds)
+
+death-totem:
+  name: "§0§lDeath Totem"
+  explosion-on-death: true
+  explosion-power: 3.0
+  explosion-breaks-blocks: false
+  respawn-with-full-health: true
+  respawn-with-effects: true     # gives strength + speed on respawn
+  effect-duration: 200           # ticks (200 = 10 seconds)
+  cooldown-seconds: 300          # 5 minute cooldown between uses
+
+# Particle effects (set false to disable for performance)
+particles:
+  soul-blade-hit: true
+  inferno-axe-hit: true
+  void-bow-teleport: true
+  titan-chestplate-hit: true
+  death-totem-explode: true
+
+# Messages (supports & color codes)
+messages:
+  soul-blade-kill: "§5§lYour soul has been taken by §d{killer}§5§l's Soul Blade!"
+  inferno-kill: "§c§l{victim} §6was incinerated by §c{killer}§6's Inferno Axe!"
+  void-teleport: "§8§lYou have been pulled through the void!"
+  death-totem-activate: "§0§lDeath rejected you. This time."
+  death-totem-cooldown: "§cYour Death Totem is recharging. §7({time}s remaining)"
+  no-permission: "§cYou don't have permission to use this command."
+  player-not-found: "§cPlayer not found."
+  invalid-item: "§cInvalid item. Use: soul-blade, inferno-axe, void-bow, titan-chestplate, death-totem"

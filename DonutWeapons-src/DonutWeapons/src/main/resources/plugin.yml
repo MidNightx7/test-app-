@@ -1,0 +1,24 @@
+name: DonutWeapons
+version: '${project.version}'
+main: com.ultimatedoughnut.donutweapons.DonutWeapons
+api-version: '1.20'
+description: Overpowered custom weapons and armor for UltimateDonutSMP
+authors: [ UltimateDonutSMP ]
+
+commands:
+  donutweapons:
+    description: Give yourself a custom weapon (admin only)
+    usage: /donutweapons <item> [player]
+    permission: donutweapons.admin
+  dwgive:
+    description: Give a custom weapon to a player
+    usage: /dwgive <player> <item>
+    permission: donutweapons.admin
+
+permissions:
+  donutweapons.admin:
+    description: Access to all DonutWeapons admin commands
+    default: op
+  donutweapons.craft:
+    description: Ability to craft custom items
+    default: true
